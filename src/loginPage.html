@@ -19,7 +19,7 @@
                 <img src="/assets/imgs/login/logo-fit.png" alt="" class="logo-img">
                 <p class="logo-content">Web Order</p>
             </div>
-            <ul class=" d-flex navbar-list">
+            <!-- <ul class=" d-flex navbar-list">
                 <li class="navbar-item">
                     <a href="#" class="navbar-itemlink">
                         <i class="navbar-icon fa-solid fa-house"></i>
@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 
-            </ul>
+            </ul> -->
         </div>
 
         <div class="d-flex main">
@@ -55,22 +55,26 @@
                 </div>
                 <form action="" class="login-form">
                     <input type="text" required placeholder="Tên đăng nhập" class="login-acc">
+                    <p class="required required-acc">Bạn phải nhập tên đăng nhập</p>
                     <input type="password" required name="" placeholder="Mật khẩu" id="" class="login-password">
+                    <p class="required required-pass">Bạn phải nhập mật khẩu</p>
+                    
+                    
                     <a href="#" class="login-mispassw">Quên mật khẩu?</a>
                     
-                    <input type="submit" value="Đăng nhập" class="login-submit btn">
+                    <input type="submit" value="Đăng nhập" class="login-submit btn" id="login-submit">
                     <!-- <p class="login-misspassw">Quên mật khẩu?</p> -->
                     
                     <div class="login-with">
                         <div class="login-facebook">
-                            <a href="" class="login-facebook-content">
+                            <a href="https://courses.fit.hcmus.edu.vn/login/index.php" class="login-facebook-content" target="_blank">
                                 <i class="login-withicon fa-brands fa-facebook"></i>
                                 Facebook
                             </a>
                         </div>
 
                         <div class="login-google">
-                            <a href="" class=" login-google-content">
+                            <a href="#" class=" login-google-content" target="_blank">
                                 <i class="login-withicon fa-brands fa-google"></i>
                                 Google
                             </a>
@@ -95,5 +99,9 @@
     <footer>
 
     </footer>
+
+
+
+    <script src="/assets/js-file/loginPage.js"></script>
 </body>
 </html>

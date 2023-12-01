@@ -151,9 +151,10 @@ li {
 .login-form{
     display: block;
     width: 80%;
-    max-width: 300px;
+    max-width: 406px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 
 }
 .login-acc,
@@ -168,11 +169,24 @@ li {
 
 .login-acc{
     margin-top: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
+.required{
+    font-size: 12px;
+    color: red;
+    display: none;
+    position: absolute;
+}
+.required-acc{
+    top: 38px;
+    /* display: block; */
+}
+.required-pass{
+    top: 106px;
+}
 .login-password{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .login-submit {
@@ -205,6 +219,7 @@ li {
     border-radius: 4px;
     position: relative;
     border: 1px solid #ccc;
+    position: relative;
 }
 
 
@@ -221,6 +236,16 @@ li {
 .login-google-content{
     padding-left: 5px;
 
+}
+
+.login-facebook-content::after,
+.login-google-content::after{
+    content: "";
+    width: 158px;
+    height: 28px;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 .login-facebook-content{
     color: #f7fffe;
