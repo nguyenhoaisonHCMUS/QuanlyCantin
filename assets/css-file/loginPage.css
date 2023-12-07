@@ -10,60 +10,10 @@
     --advertisement--heght: 242px;
 }
 
-.full-width {
-    width: 100%;
-}
-
-* {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style-type: none;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.btn{
-    padding: 5px 8px;
-    background-color: #4682B4;
-    border: none;
-    text-transform: uppercase;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #f7fffe;
-}
-
-.btn:hover{
-    background-color: #0e5e9f;
-}
-
-
-
-
-
 
 
 
 /*header begin*/
-
-.navbar-logo {
-    
-}
 
 .logo-img:hover{
     cursor: pointer;
@@ -88,7 +38,7 @@ li {
     align-items: center;
     justify-content: space-between;
 }
-.navbar-item{}
+
 .navbar-icon{
     color: var(--white-color);
     padding-left: 10px;
@@ -110,18 +60,29 @@ li {
     align-items: center;
     justify-content: center;
     background-color: antiquewhite;
-    
+    overflow: hidden;
+    position: relative;
+    min-height: 600px;
 }
 .advertisement-imgs{
     width: 353px;
     /* margin-left: auto;
     margin-right: auto; */
     margin-top: 40px;
-    margin-bottom: 80px;
+
     border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    /* right: 50%; */
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-
+.advertisement .active{
+    opacity: 1;
+}
 
 .login{
     flex: 2;
@@ -130,6 +91,12 @@ li {
 .login-content{
     margin-bottom: 10px;
     
+}
+
+.login-content .active {
+    background-color: #fff;
+    color : #000;
+    border-bottom:none;
 }
 .login-contentlogin,
 .login-contentregis{
@@ -140,12 +107,15 @@ li {
     padding-top: 10px;
     cursor: pointer;
     height: 100%;
+    background-color: #4682B4;
+    color: #f7fffe;
 }
 
 .login-contentlogin:hover,
 .login-contentregis:hover {
-    background-color: #4682B4;
-    color: #f0ffff;
+    background-color: #fff;
+    color: #000;
+    border-bottom: none;
 }
 
 .login-form{
@@ -158,18 +128,24 @@ li {
 
 }
 .login-acc,
-.login-password{
+.login-password,
+.required-password,
+.register-name{
     display: block;
     padding: 8px;
     width: 100%;
     font-size: 16px;
     border-radius: 4px;
+    margin-top: 30px;
 
 }
-
 .login-acc{
     margin-top: 70px;
-    margin-bottom: 30px;
+}
+
+
+.required-password{
+    margin-top: 30px;
 }
 
 .required{
@@ -185,17 +161,41 @@ li {
 .required-pass{
     top: 106px;
 }
+
+.required-name {
+    top: 40px;
+    display: none;
+}
+
+.register-form .required-acc{
+    top: 147px;
+    /* display: block; */
+}
+.register-form .required-pass{
+    top: 216px;
+}
+
+
+
 .login-password{
     margin-bottom: 10px;
 }
 
-.login-submit {
+.reRequired-pass{
+    top: 284px;
+    display: none;
+}
+
+.login-submit,
+.register-submit {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 47px;
     width: 100%;
 }
+
+
 
 
 .login-mispassw{
@@ -266,8 +266,131 @@ li {
 }
 
 
+
+
+/*Ẩn */
+.register-form .login-mispassw {
+    display: none;
+}
+.register-form .login-with {
+    display: none;
+}
+
+.register-form .login-submit{
+    display: none;
+}
+
+.register-form .login-acc{
+    margin-top: 30px;
+}
+
+/*Hiện*/
+.register-submit,
+.register-sex,
+.register-name,
+.required-password,
+.register-policy {
+    display: none;
+}
+
+
+.register-date{
+    float: right;
+}
+
+.register-form .register-submit,
+.register-form .required-password,
+.register-form .register-name{
+    display: block;
+}
+
+.register-form .register-sex{
+    margin-top: 20px;
+    display: block;
+}
+
+.register-form .register-policy{
+    display: block;
+    margin-top: 20px;
+}
+
+.register-gender{
+    min-width: 100px;
+}
+
+
+
+
 /*main end*/
 
 
 /*header end*/
+
+/*footer */
+footer{
+    padding: 20px 10px;
+    color: #f0ffff;
+    background-color: #4682B4;
+}
+footer a{
+    color: #f0ffff;
+
+}
+.footerheading{}
+.contact{
+    margin-top: 30px;
+}
+.contact__online{
+    flex: 1;
+}
+.contact__facebook{}
+
+
+.contact__icon{
+    margin-right: 8px;
+    padding-bottom: 10px;
+}
+.contact__instagram{}
+.contact__off{
+    flex: 1;
+}
+.contact__address{
+    padding-bottom: 10px;
+
+}
+.contact__phone{}
+
+/*footer end*/
+
+body{
+    position: relative;
+}
+
+.term{
+    position: absolute;
+    width: 100%;  
+    height: 100%;  
+    top: 0;
+    background-color: #33333399;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+
+.term-regis{
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+    color: #ccc;
+    line-height: 25px;
+    padding: 10px 10px;
+}
+
+.term-regis h2{
+    margin-bottom: 10px;
+}
+
+
 

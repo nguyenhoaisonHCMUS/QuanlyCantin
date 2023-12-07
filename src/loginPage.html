@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css-file/loginPage.css">
-    <link rel="stylesheet" href="/assets/css-file/fontawesome-free-6.4.2-web/css/all.css">
-
+    <link rel="stylesheet" href="/html/assets/css-file/loginPage.css">
+    <link rel="stylesheet" href="/html/assets/css-file/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="/html/assets/css-file/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,300;1,700;1,900&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <header>
         <div class="d-flex navbar">
             <div class="d-flex navbar-logo">
-                <img src="/assets/imgs/login/logo-fit.png" alt="" class="logo-img">
+                <img src="/html/assets/imgs/login/logo-fit.png" alt="" class="logo-img">
                 <p class="logo-content">Web Order</p>
             </div>
             <!-- <ul class=" d-flex navbar-list">
@@ -43,65 +43,133 @@
             </ul> -->
         </div>
 
-        <div class="d-flex main">
-            <div class="advertisement">
-                <img src="/assets/imgs/login/thiet-ke-poster-quang-cao-nha-hnag-pizza.jpg" alt="" class="advertisement-imgs">
-            </div>
-
-            <div class="login">
-                <div class="d-flex login-content">
-                    <h2 class="login-contentlogin">Đăng nhập</h2>
-                    <h2 class="login-contentregis">Đăng ký</h2>
-                </div>
-                <form action="" class="login-form">
-                    <input type="text" required placeholder="Tên đăng nhập" class="login-acc">
-                    <p class="required required-acc">Bạn phải nhập tên đăng nhập</p>
-                    <input type="password" required name="" placeholder="Mật khẩu" id="" class="login-password">
-                    <p class="required required-pass">Bạn phải nhập mật khẩu</p>
-                    
-                    
-                    <a href="#" class="login-mispassw">Quên mật khẩu?</a>
-                    
-                    <input type="submit" value="Đăng nhập" class="login-submit btn" id="login-submit">
-                    <!-- <p class="login-misspassw">Quên mật khẩu?</p> -->
-                    
-                    <div class="login-with">
-                        <div class="login-facebook">
-                            <a href="https://courses.fit.hcmus.edu.vn/login/index.php" class="login-facebook-content" target="_blank">
-                                <i class="login-withicon fa-brands fa-facebook"></i>
-                                Facebook
-                            </a>
-                        </div>
-
-                        <div class="login-google">
-                            <a href="#" class=" login-google-content" target="_blank">
-                                <i class="login-withicon fa-brands fa-google"></i>
-                                Google
-                            </a>
-                        </div>
-                    </div>
-                
-                </form>
-            </div>
-
-
-
-        </div>
+        
     </header>
     
     
-    <div id="main">
+    <div class="d-flex main">
+        <div class="advertisement">
+            <img src="/html/assets/imgs/login/thiet-ke-poster-quang-cao-nha-hnag-pizza.jpg" alt="img1" class="advertisement-imgs">
+            <img src="/html/assets/imgs/login/com_duong_chau_e916b1e75110453b86a50d87db7ac2c9.jpg" alt="img1" class="advertisement-imgs">
+            <img src="/html/assets/imgs/login/do-uong-khong-con-dong-chai.jpg" alt="img1" class="advertisement-imgs">
+            <img src="/html/assets/imgs/login/hoaqua.jpg" alt="img1" class="advertisement-imgs">
+            <img src="/html/assets/imgs/login/quangba_my_quang.png" alt="img1" class="advertisement-imgs">
+        </div>
+
+        <div class="login">
+            <div class="d-flex login-content">
+                <h2 class="login-contentlogin active">Đăng nhập</h2>
+                <h2 class="login-contentregis">Đăng ký</h2>
+            </div>
+            <form action="" class="login-form">
+                <input type="text" placeholder="Họ và tên" class="register-name">
+                <p class="required required-name">x</p>
+                <div class="register-sex">
+                    <select class="register-gender" name="gender">
+                        <option value="male">Nam</option>
+                        <option value="female">Nữ</option>
+                        <option value="other">Khác</option>
+                    </select>
+
+                    <label for="register-date" class="register-date">
+                        Ngày sinh: 
+                        <input type="date" name="" id="register-date" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31">
+                    </label>
+                </div>
+                
+
+                <input type="text" required placeholder="Tên đăng nhập" class="login-acc">
+                <p class="required required-acc">Bạn phải nhập tên đăng nhập</p>
+                <input type="password" required name="" placeholder="Mật khẩu"  class="login-password">
+                <p class="required required-pass">Bạn phải nhập mật khẩu</p>
+                
+                <input type="password" placeholder="Nhập lại mật khẩu"  class="required-password">
+                <p class="required reRequired-pass">x</p>
+
+
+                
+                <a href="#" class="login-mispassw">Quên mật khẩu?</a>
+
+                <p class="register-policy">
+                    <input type="checkbox" name="" id="checkbox-policy">
+                    Tôi đồng ý với <a href="#" class="register-policy-DKSD">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a></p>
+                <input type="submit" value="Đăng nhập" class="login-submit btn" id="login-submit">
+                <input type="submit" value="Đăng ký" class="register-submit btn" id="register-submit">
+
+                <!-- <p class="login-misspassw">Quên mật khẩu?</p> -->
+                
+
+
+
+
+
+
+                <div class="login-with">
+                    <div class="login-facebook">
+                        <a href="https://courses.fit.hcmus.edu.vn/login/index.php" class="login-facebook-content" target="_blank">
+                            <i class="login-withicon fa-brands fa-facebook"></i>
+                            Facebook
+                        </a>
+                    </div>
+
+                    <div class="login-google">
+                        <a href="#" class=" login-google-content" target="_blank">
+                            <i class="login-withicon fa-brands fa-google"></i>
+                            Google
+                        </a>
+                    </div>
+                </div>
+            
+            </form>
+        </div>
+
 
 
     </div>
 
 
     <footer>
+        <div class="footerheading">
+            <h2>Liên hệ với chúng tôi</h2>
+        </div>
+        <div class="contact d-flex">
+            <div class="contact__online">
+                <div class="contact__facebook"><a href="" target="_blank" rel="noopener noreferrer"><i class="contact__icon fa-brands fa-facebook"></i>Facebook</a></div>
+                <div class="contact__instagram"><a href="" target="_blank" rel="noopener noreferrer"><i class="contact__icon fa-brands fa-instagram""></i>Instagram</a></div>
+            </div>
+            <div class="contact__off">
+                <div class="contact__address"> 
+                    Địa chỉ: 24 Nguyễn Văn Cừ, Quận 5, Thành phố Hồ Chí Minh
+                </div>
+                <div class="contact__phone">SDT: 0123456789</div>
+            </div>
+        
+        </div>
 
+
+        
     </footer>
 
+    <div class="term">
+        <div class="term-regis">
+            <h2>Điều khoản sử dụng</h2>
+            <p>Các Điều Khoản Sử Dụng này là cam kết giữa Bạn và Website. Theo đó Công Ty sẵn sàng cấp cho Bạn quyền truy cập vào Website này. 
+
+                <br>Công Ty có quyền thay đổi các Điều Khoản Sử Dụng này tùy từng thời điểm .Các quyền của Bạn theo Điều Khoản Sử Dụng này sẽ là quyền theo nội dung được ghi nhận tại phiên bản mới nhất của Điều Khoản Sử Dụng được đăng trên App tại thời điểm Bạn sử dụng. Bằng cách truy cập hoặc thực hiện bất cứ tác vụ nào trên App sau khi chúng tôi đã công bố, bạn đồng ý với các nội dung của Điều Khoản Sử Dụng như đã sửa đổi tương ứng.
+            </p>
+        </div>
+    </div>
+
+    <div class="policy">
+        <div class="policy-regis">
+            <h2></h2>
+            <p>
+            </p>
+        </div>
+    </div>
 
 
-    <script src="/assets/js-file/loginPage.js"></script>
+
+    <script src="/html/assets/js-file/loginPage.js"></script>
 </body>
 </html>
